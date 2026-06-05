@@ -1,0 +1,3 @@
+﻿# elavtirips
+
+Static asset storage.

@@ -1,0 +1,12 @@
+# elavtirips — PUBLIC payload repo. It must contain ONLY encrypted .enc blobs.
+#
+# Whitelist pattern: ignore EVERYTHING, then re-allow directories so git can descend,
+# plus .enc payloads and a couple of known meta files. Consequence: a stray secret
+# (a ship SQL carrying the plaintext AES key, a raw .dll, release notes, etc.) placed
+# anywhere in this repo can NEVER be accidentally `git add`ed or pushed to the public.
+*
+!*/
+!*.enc
+!.gitignore
+!README.md
+!.gitkeep
